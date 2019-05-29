@@ -1,0 +1,9 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  background-color: blue;
+}
+// This is needed in order to add or hide the 'hide' elements
+.hide {
+  display: none;
+}
