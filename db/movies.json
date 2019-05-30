@@ -1,0 +1,17 @@
+{
+  "movie1": {
+    "title": "Wanderlust",
+    "movieRating": "R",
+    "imgUrl": "../src/assets/covers/wanderlust.jpg"
+  },
+  "movie2": {
+    "title": "Half Baked",
+    "movieRating": "R",
+    "imgUrl": "../src/assets/covers/half_baked.jpg"
+  },
+  "movie3": {
+    "title": "Stomp The Yard",
+    "movieRating": "R",
+    "imgUrl": "../src/assets/covers/stomp_the_yard.jpeg"
+  }
+}

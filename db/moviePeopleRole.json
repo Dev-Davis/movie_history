@@ -1,0 +1,67 @@
+{
+  "mpr1": {
+    "peopleId": "person2",
+    "movieId": "movie1",
+    "roleId": "role1"
+  },
+  "mpr2": {
+    "peopleId": "person6",
+    "movieId": "movie2",
+    "roleId": "role2"
+  },
+  "mpr3": {
+    "peopleId": "person3",
+    "movieId": "movie1",
+    "roleId": "role2"
+  },
+  "mpr4": {
+    "peopleId": "person8",
+    "movieId": "movie3",
+    "roleId": "role1"
+  },
+  "mpr5": {
+    "peopleId": "person12",
+    "movieId": "movie2",
+    "roleId": "role4"
+  },
+  "mpr6": {
+    "peopleId": "person9",
+    "movieId": "movie3",
+    "roleId": "role2"
+  },
+  "mpr7": {
+    "peopleId": "person4",
+    "movieId": "movie1",
+    "roleId": "role1"
+  },
+  "mpr8": {
+    "peopleId": "person11",
+    "movieId": "movie3",
+    "roleId": "role1"
+  },
+  "mpr9": {
+    "peopleId": "person1",
+    "movieId": "movie1",
+    "roleId": "role1"
+  },
+  "mpr10": {
+    "peopleId": "person5",
+    "movieId": "movie2",
+    "roleId": "role1"
+  },
+  "mpr11": {
+    "peopleId": "person7",
+    "movieId": "movie2",
+    "roleId": "role1"
+  },
+  "mpr12": {
+    "peopleId": "person10",
+    "movieId": "movie3",
+    "roleId": "role1"
+  },
+  "mpr13": { 
+    "peopleId": "person13",
+    "movieId": "movie1",
+    "roleId": "role4"
+  }
+}
