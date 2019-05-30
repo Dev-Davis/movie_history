@@ -5,7 +5,7 @@ import '../styles/main.scss';
 
 import auth from './components/auth/auth';
 import myNavbar from './components/myNavbar/myNavbar';
-import authData from './helpers/data/authData';
+import authData from './helpers/data/authData/authData';
 
 import apiKeys from './helpers/apiKeys.json';
 

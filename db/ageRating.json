@@ -1,0 +1,18 @@
+{
+  "rating1": {
+    "rated": "R"
+  },
+  "rating2": {
+    "rated": "NC-17"
+  },
+  "rating3": {
+    "rated": "PG-13"
+  },
+  "rating4": {
+    "rated": "PG"
+  },
+  "rating5": {
+    "rated": "G"
+  }
+  
+}
