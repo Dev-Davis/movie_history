@@ -1,4 +1,4 @@
-## Installing firebase from thw command line
+## Installing firebase from the command line
 * type the following command `npm install --save firebase`
 
 ## apiKeys in Firebase
@@ -14,5 +14,10 @@
 * Make sure it's set to RealTime Database
 * Click the 3 dots in the upper right hand corner and import base.json then continue to add your databases from there
 
-## Object.keys
+## Object.keys()
 * Object.keys() method is used to return the array whose elements are strings corresponding to the enumerable properties found directly upon the object.
+
+## Object.value()
+
+## Firebase Database Rules
+* Make sure **Read** and **Write** are set to **TRUE** in your firebase database rules

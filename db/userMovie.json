@@ -9,7 +9,7 @@
   "userMovie2": {
     "uid": "user2",
     "movieId": "movie1",
-    "isWatched": "true",
+    "isWatched": "false",
     "rating": "5",
     "field": "comedy"
   },
