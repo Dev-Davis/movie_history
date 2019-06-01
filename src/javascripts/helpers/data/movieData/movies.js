@@ -13,14 +13,12 @@ const movieStringBuilder = () => {
     domString += '<div class="row">';
     movies.forEach((movie) => {
       domString += '<div class="col-4">';
-      domString += '<div class="card text-center" style="width: 18rem;">';
+      domString += '<div class="card text-center border" style="width: 18rem;">';
       domString += `<img src="${movie.imgUrl}" class="card-img-top" alt="Movie Image">`;
       domString += '<div class="card-body">';
-      domString += `<h5 class="movieTitle">${movie.title}"</h5>`;
-      domString += `<h5 class="card-text">Rated ${movie.movieRating}</h5>`;
+      domString += `<h4 class="movieTitle">${movie.title}</h4>`;
+      domString += `<p class="card-text">Rated ${movie.movieRating}</p>`;
       domString += '<div id="watchBtn" class="btn btn-primary">Watch Later</a>';
-      domString += '</div>';
-      domString += '<div id="rateBtn" class="btn btn-primary">Rate Movie</a>';
       domString += '</div>';
       domString += '</div>';
       domString += '</div>';
