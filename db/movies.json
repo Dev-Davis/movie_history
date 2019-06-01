@@ -13,5 +13,35 @@
     "title": "Stomp The Yard",
     "movieRating": "R",
     "imgUrl": "../src/assets/covers/stomp_the_yard.jpeg"
+  },
+  "movie4": {
+    "title": "The Lion King",
+    "movieRating": "G",
+    "imgUrl": "../src/assets/covers/the_lion_king.jpg"
+  },
+  "movie5": {
+    "title": "40 Year Old Virgin",
+    "movieRating": "R",
+    "imgUrl": "../src/assets/covers/40_yov.jpeg"
+  },
+  "movie6": {
+    "title": "Drumline",
+    "movieRating": "PG-13",
+    "imgUrl": "../src/assets/covers/drumline.jpg"
+  },
+  "movie7": {
+    "title": "Insidious",
+    "movieRating": "PG-13",
+    "imgUrl": "../src/assets/covers/insidious.jpg"
+  },
+  "movie8": {
+    "title": "Jumper",
+    "movieRating": "PG-13",
+    "imgUrl": "../src/assets/covers/jumper.jpg"
+  },
+  "movie9": {
+    "title": "Venom",
+    "movieRating": "PG-13",
+    "imgUrl": "../src/assets/covers/venom.jpg"
   }
 }
