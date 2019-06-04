@@ -2,22 +2,19 @@
   "userMovie1": {
     "uid": "user1",
     "movieId": "movie1",
-    "isWatched": "true",
-    "rating": "4",
-    "field": "comedy"
+    "isWatched": true,
+    "rating": 4
   },
   "userMovie2": {
     "uid": "user2",
     "movieId": "movie1",
-    "isWatched": "false",
-    "rating": "5",
-    "field": "comedy"
+    "isWatched": false,
+    "rating": 5
   },
   "userMovie3": {
     "uid": "user3",
     "movieId": "movie3",
-    "isWatched": "true",
-    "rating": "4",
-    "field": "drama"
+    "isWatched": true,
+    "rating": 4
   }
 }

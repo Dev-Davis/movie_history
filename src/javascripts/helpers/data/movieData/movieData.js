@@ -19,6 +19,7 @@ const getMovies = () => new Promise((resolve, reject) => {
     .then((results) => {
       const movieResults = results.data;
       const movies = [];
+      // Object.keys is the weird string in your firebase database
       Object.keys(movieResults).forEach((movieId) => {
         movieResults[movieId].id = movieId;
         movies.push(movieResults[movieId]);
@@ -28,4 +29,7 @@ const getMovies = () => new Promise((resolve, reject) => {
     .catch(err => reject(err));
 });
 
-export default { getMovies };
+const addNewMovie = yourMovies => axios.post(`${firebaseUrl}/movies.json`, yourMovies);
+const deleteMovie = movieId => axios.delete(`${firebaseUrl}/movies/${movieId}.json`);
+
+export default { getMovies, addNewMovie, deleteMovie };

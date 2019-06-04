@@ -1,7 +1,7 @@
 @import "~bootstrap/scss/bootstrap";
 
 body {
-  background-color: blue;
+  background-color: black;
 }
 // This is needed in order to add or hide the 'hide' elements
 .hide {
@@ -10,4 +10,16 @@ body {
 
 .border {
   margin: 10px;
+}
+
+#watchBtn {
+  margin-right: 5px;
+}
+
+#watchBtn:hover {
+  cursor: pointer;
+}
+
+.been-added {
+  display: none;
 }
