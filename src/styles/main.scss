@@ -2,14 +2,24 @@
 
 body {
   background-color: black;
+  font-family: 'Lobster', cursive;
 }
 // This is needed in order to add or hide the 'hide' elements
 .hide {
   display: none;
 }
 
+a {
+  font-size: 32px;
+}
+
 .border {
-  margin: 10px;
+  margin-bottom: 10px;
+}
+
+.movieTitle {
+  // margin: 12px;
+  padding: 13px;
 }
 
 #watchBtn {
@@ -22,4 +32,8 @@ body {
 
 .been-added {
   display: none;
+}
+
+#createMovieButton, #backButton {
+  margin: 15px;
 }

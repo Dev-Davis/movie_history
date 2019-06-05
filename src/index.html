@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Movie History</title>
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower|Lobster|Pacifico&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -45,17 +46,20 @@
   <!-- Your authentication login form or button -->
   <div id="auth"></div>
 
-  <div id="createMovieButton" class="btn btn-info text-center">Add new Movie</div>
-
   <div id="movies"><!-- Start of movies display -->
+    <div id="createMovieButton" class="btn btn-info text-center">Add new Movie</div>
     <div id="moviesDisplay"></div>
   </div>
 
   <div id="toWatch" class="hide">
-    <div id="watchList"></div>
+    <div id="backButton" class="btn btn-info text-center">Back to Movies</div>
+    <div id="watchList">
+      <h1>Watch List</h1>
+    </div>
   </div>
 
   <div id="new-movie" class="hide">
+    <div id="backButton" class="btn btn-info text-center offset-6">Back to Movies</div>
     <form class="col-6 offset-3">
       <div class="form-group">
         <label for="imgUrl">Image Path</label>
