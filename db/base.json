@@ -3,5 +3,6 @@
   "movies": "movie",
   "userMovie": "user",
   "roles": "role",
-  "people": "person"
+  "people": "person",
+  "userMovie": "userMovie"
 }

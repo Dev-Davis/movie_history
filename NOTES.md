@@ -2,7 +2,7 @@
 * type the following command `npm install --save firebase`
 
 ## apiKeys in Firebase
-* To add your custom apiKeys, go to firebase > project overview > add app. 
+* To add your custom apiKeys, go to firebase > project overview > add app.
 
 * Click on the web button, enter your app title and your keys to copy will be at the bottom
 
@@ -21,3 +21,8 @@
 
 ## Firebase Database Rules
 * Make sure **Read** and **Write** are set to **TRUE** in your firebase database rules
+
+## To update your database
+* You have to re import you json file to firebase
+
+##
