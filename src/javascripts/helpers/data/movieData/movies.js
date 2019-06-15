@@ -6,6 +6,7 @@ import util from '../../util';
 
 import collection from './movieData';
 import watch from '../watchListData/watchListData';
+// import smash from '../../SMASH/smash';
 
 
 /* Adding a new movie in the firebase database and the movieStringBuilder reloads
@@ -51,7 +52,8 @@ const backToMovie = () => {
   document.getElementById('movies').classList.remove('hide');
   document.getElementById('new-movie').classList.add('hide');
   document.getElementById('createMovieButton').classList.remove('hide');
-  document.getElementById('backButton').classList.add('hide');
+  document.getElementById('back-from-watch').classList.add('hide');
+  document.getElementById('back-from-add').classList.remove('hide');
 };
 
 /* How to add to the movieUser in firebase database. The newUserMovie object is the information that will be
@@ -62,10 +64,16 @@ const addMovieToWatchList = (e) => {
   const newUserMovie = {
     isWatched: false,
     movieId: e.target.id,
-    rating: '',
+    imgUrl: document.getElementById('imgUrl').src,
+    title: document.getElementById('title').text,
+    movieRating: document.getElementById('rating').text,
+    userRating: document.getElementById('rating').text,
     uid: firebase.auth().currentUser.uid,
   };
-  watch.addNewUserMovie(newUserMovie);
+  watch.addNewUserMovie(newUserMovie)
+    .then(() => {
+      watchStringBuilder(); // eslint-disable-line no-use-before-define
+    });
 };
 
 /* The watchListButton function attaches to each button on each card to add the click event to them to perform
@@ -78,12 +86,13 @@ const watchListView = () => {
   document.getElementById('movies').classList.add('hide');
   document.getElementById('toWatch').classList.remove('hide');
   document.getElementById('createMovieButton').classList.add('hide');
-  document.getElementById('backButton').classList.remove('hide');
+  document.getElementById('back-from-watch').classList.remove('hide');
+  document.getElementById('back-from-add').classList.remove('hide');
 };
 
 const watchListButton = () => {
   const buttons = document.querySelectorAll('.watchBtn');
-
+  console.error(buttons);
   buttons.forEach((button) => {
     button.addEventListener('click', addMovieToWatchList);
     button.addEventListener('click', watchListView);
@@ -94,7 +103,8 @@ const watchListButton = () => {
 
 const addEvents = () => {
   document.getElementById('createMovieButton').addEventListener('click', addMovieButton);
-  document.getElementById('backButton').addEventListener('click', backToMovie);
+  document.getElementById('back-from-watch').addEventListener('click', backToMovie);
+  document.getElementById('back-from-add').addEventListener('click', backToMovie);
 };
 
 /* Creates the domString to display the movies on the webpage. The movies.getMovies()
@@ -126,17 +136,17 @@ const movieStringBuilder = () => {
 };
 
 const watchStringBuilder = () => {
-  watch.getUserMovie().then((watchList) => {
+  const uId = firebase.auth().currentUser.uid;
+  watch.getUserMovie(uId).then((watchList) => {
     let domString = '';
     domString += '<div class="row">';
     watchList.forEach((movie) => {
-      domString += '<div class="col-lg-3 col-md-4 col-sm-2">';
+      domString += `<div class="col-lg-3 col-md-4 col-sm-2" id="${movie.id}">`;
       domString += '<div class="card text-center border" style="width: 15rem;">';
       domString += `<h4 class="movieTitle">${movie.title}</h4>`;
       domString += `<img src="${movie.imgUrl}" id="poster" class="card-img-top" alt="Movie Image">`;
       domString += '<div class="card-body">';
-      domString += `<h4 class="card-text rating">Rated ${movie.movieRating}</h4>`;
-      domString += `<div id="${movie.id}" class="btn btn-warning watchBtn">Watch Later</div>`;
+      domString += `<div id="${movie.id}" class="btn btn-danger deleteBtn">Delete/div>`;
       domString += '</div>';
       domString += '</div>';
       domString += '</div>';

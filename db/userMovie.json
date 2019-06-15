@@ -14,7 +14,7 @@
   "userMovie3": {
     "uid": "user3",
     "movieId": "movie3",
-    "isWatched": true,
+    "isWatched": false,
     "rating": 4
   }
 }
