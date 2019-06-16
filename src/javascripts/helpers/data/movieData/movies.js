@@ -11,6 +11,7 @@ import watch from '../watchListData/watchListData';
 
 /* Adding a new movie in the firebase database and the movieStringBuilder reloads
 everything on the DOM including the new movie */
+
 const createMovie = (e) => {
   e.preventDefault();
   const newMovie = {
@@ -32,6 +33,11 @@ const createMovie = (e) => {
     })
     .catch(err => console.error('no movies added', err));
 };
+
+// const deleteMovie = (e) => {
+//   e.preventDefault();
+//   const
+// };
 
 /* This function is for  when you click the movie button the form to add a new movie appears.
 Once you've entered the information, the form will disappear and you will return to the movies home page */
@@ -92,7 +98,6 @@ const watchListView = () => {
 
 const watchListButton = () => {
   const buttons = document.querySelectorAll('.watchBtn');
-  console.error(buttons);
   buttons.forEach((button) => {
     button.addEventListener('click', addMovieToWatchList);
     button.addEventListener('click', watchListView);
@@ -135,6 +140,22 @@ const movieStringBuilder = () => {
     .catch(err => console.error('Could not get movies', err));
 };
 
+const deleteMovies = (e) => {
+  const movieId = e.target.id;
+  collection.deleteMovie(movieId)
+    .then(() => {
+      watchStringBuilder(firebase.auth().currentUser.uid); // eslint-disable-line no-use-before-define
+    })
+    .catch(err => console.error('no watch list built', err));
+};
+
+const deleteEvent = () => {
+  const removes = document.querySelectorAll('.deleteBtn');
+  removes.forEach((remove) => {
+    remove.addEventListener('click', deleteMovies);
+  });
+};
+
 const watchStringBuilder = () => {
   const uId = firebase.auth().currentUser.uid;
   watch.getUserMovie(uId).then((watchList) => {
@@ -143,17 +164,18 @@ const watchStringBuilder = () => {
     watchList.forEach((movie) => {
       domString += `<div class="col-lg-3 col-md-4 col-sm-2" id="${movie.id}">`;
       domString += '<div class="card text-center border" style="width: 15rem;">';
-      domString += `<h4 class="movieTitle">${movie.title}</h4>`;
-      domString += `<img src="${movie.imgUrl}" id="poster" class="card-img-top" alt="Movie Image">`;
+      domString += `<h4 class="movieTitle">${movie.name}</h4>`;
+      domString += `<p class="hasWatched" id="poster" class="card-img-top">${movie.isWatched}</p>`;
       domString += '<div class="card-body">';
-      domString += `<div id="${movie.id}" class="btn btn-danger deleteBtn">Delete/div>`;
+      domString += `<div id="${movie.id}" class="btn btn-danger deleteBtn">Delete</div>`;
       domString += '</div>';
       domString += '</div>';
       domString += '</div>';
-      addEvents();
     });
     domString += '</div>';
     util.printToDom('watchList', domString);
+    addEvents();
+    deleteEvent();
   })
     .catch(err => console.error('no watch list returned', err));
 };
