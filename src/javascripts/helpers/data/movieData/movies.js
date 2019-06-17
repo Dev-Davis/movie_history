@@ -142,7 +142,7 @@ const movieStringBuilder = () => {
 
 const deleteMovies = (e) => {
   const movieId = e.target.id;
-  collection.deleteMovie(movieId)
+  watch.deleteMovie(movieId)
     .then(() => {
       watchStringBuilder(firebase.auth().currentUser.uid); // eslint-disable-line no-use-before-define
     })
