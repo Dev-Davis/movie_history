@@ -18,6 +18,7 @@ const createMovie = (e) => {
     imgUrl: document.getElementById('imgUrl').value,
     title: document.getElementById('title').value,
     movieRating: document.getElementById('rating').value,
+    movieId: (firebase.auth().currentUser.uid),
   };
   collection.addNewMovie(newMovie)
     .then(() => {
@@ -26,18 +27,13 @@ const createMovie = (e) => {
       document.getElementById('movies').classList.remove('hide');
       document.getElementById('new-movie').classList.add('hide');
       document.getElementById('createMovieButton').classList.remove('hide');
-      document.getElementById('backButton').classList.add('hide');
-      document.getElementById('backButton').classList.add('hide');
+      document.getElementById('back-from-add').classList.add('hide');
+      document.getElementById('back-from-watch').classList.add('hide');
       // the movieStringBuilder adds the actual movie to the site
       movieStringBuilder(); // eslint-disable-line no-use-before-define
     })
     .catch(err => console.error('no movies added', err));
 };
-
-// const deleteMovie = (e) => {
-//   e.preventDefault();
-//   const
-// };
 
 /* This function is for  when you click the movie button the form to add a new movie appears.
 Once you've entered the information, the form will disappear and you will return to the movies home page */
@@ -47,7 +43,7 @@ const addMovieButton = () => {
   document.getElementById('new-movie').classList.remove('hide');
   document.getElementById('toWatch').classList.add('hide');
   document.getElementById('createMovieButton').classList.add('hide');
-  document.getElementById('backButton').classList.remove('hide');
+  document.getElementById('back-from-add').classList.remove('hide');
   document.getElementById('saveNewMovie').addEventListener('click', createMovie);
 };
 
@@ -110,6 +106,7 @@ const addEvents = () => {
   document.getElementById('createMovieButton').addEventListener('click', addMovieButton);
   document.getElementById('back-from-watch').addEventListener('click', backToMovie);
   document.getElementById('back-from-add').addEventListener('click', backToMovie);
+  document.getElementById('navbar-button-history').addEventListener('click', watchListView);
 };
 
 /* Creates the domString to display the movies on the webpage. The movies.getMovies()
@@ -122,12 +119,27 @@ const movieStringBuilder = () => {
     domString += '<div class="row">';
     movies.forEach((movie) => {
       domString += '<div class="col-lg-3 col-md-4 col-sm-2">';
-      domString += '<div class="card text-center border" style="width: 22rem;">';
+      domString += '<div class="card text-center border" style="width: 20rem;">';
       domString += `<h4 class="movieTitle">${movie.title}</h4>`;
       domString += `<img src="${movie.imgUrl}" id="poster" class="card-img-top" alt="Movie Image">`;
       domString += '<div class="card-body">';
       domString += `<h4 class="card-text rating">Rated ${movie.movieRating}</h4>`;
-      domString += `<div id="${movie.id}" class="btn btn-warning watchBtn">Watch Later</div>`;
+      domString += `<div id="${movie.id}" class="btn btn-warning watchBtn">Watched</div>`;
+      domString += '<div class="stars">';
+      domString += '<form action="" id="startForm">';
+      domString += '<input class="star star-5" id="star-5" type="radio" name="star"/>';
+      domString += '<label class="star star-5" for="star-5">1</label>';
+      domString += '<input class="star star-4" id="star-4" type="radio" name="star"/>';
+      domString += '<label class="star star-4" for="star-4">2</label>';
+      domString += '<input class="star star-3" id="star-3" type="radio" name="star"/>';
+      domString += '<label class="star star-3" for="star-3">3</label>';
+      domString += '<input class="star star-2" id="star-2" type="radio" name="star"/>';
+      domString += '<label class="star star-2" for="star-2">4</label>';
+      domString += '<input class="star star-1" id="star-1" type="radio" name="star"/>';
+      domString += '<label class="star star-1" for="star-1">5</label>';
+      domString += '</form>';
+      domString += `<div id="${movie.id}" class="btn btn-info startForm">Rate</div>`;
+      domString += '</div>';
       domString += '</div>';
       domString += '</div>';
       domString += '</div>';
