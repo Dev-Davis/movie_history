@@ -125,21 +125,6 @@ const movieStringBuilder = () => {
       domString += '<div class="card-body">';
       domString += `<h4 class="card-text rating">Rated ${movie.movieRating}</h4>`;
       domString += `<div id="${movie.id}" class="btn btn-warning watchBtn">Watched</div>`;
-      domString += '<div class="stars">';
-      domString += '<form action="" id="startForm">';
-      domString += '<input class="star star-5" id="star-5" type="radio" name="star"/>';
-      domString += '<label class="star star-5" for="star-5">1</label>';
-      domString += '<input class="star star-4" id="star-4" type="radio" name="star"/>';
-      domString += '<label class="star star-4" for="star-4">2</label>';
-      domString += '<input class="star star-3" id="star-3" type="radio" name="star"/>';
-      domString += '<label class="star star-3" for="star-3">3</label>';
-      domString += '<input class="star star-2" id="star-2" type="radio" name="star"/>';
-      domString += '<label class="star star-2" for="star-2">4</label>';
-      domString += '<input class="star star-1" id="star-1" type="radio" name="star"/>';
-      domString += '<label class="star star-1" for="star-1">5</label>';
-      domString += '</form>';
-      domString += `<div id="${movie.id}" class="btn btn-info startForm">Rate</div>`;
-      domString += '</div>';
       domString += '</div>';
       domString += '</div>';
       domString += '</div>';
@@ -169,8 +154,7 @@ const deleteEvent = () => {
 };
 
 const watchStringBuilder = () => {
-  const uId = firebase.auth().currentUser.uid;
-  watch.getUserMovie(uId).then((watchList) => {
+  watch.getUserMovie().then((watchList) => {
     let domString = '';
     domString += '<div class="row">';
     watchList.forEach((movie) => {
@@ -179,6 +163,21 @@ const watchStringBuilder = () => {
       domString += `<h4 class="movieTitle">${movie.name}</h4>`;
       domString += `<p class="hasWatched" id="poster" class="card-img-top">${movie.isWatched}</p>`;
       domString += '<div class="card-body">';
+      domString += '<div class="stars">';
+      domString += '<form action="" id="startForm">';
+      domString += '<input class="star star-5" id="star-5" type="radio" name="star"/>';
+      domString += '<label class="star star-5" for="star-5">1</label>';
+      domString += '<input class="star star-4" id="star-4" type="radio" name="star"/>';
+      domString += '<label class="star star-4" for="star-4">2</label>';
+      domString += '<input class="star star-3" id="star-3" type="radio" name="star"/>';
+      domString += '<label class="star star-3" for="star-3">3</label>';
+      domString += '<input class="star star-2" id="star-2" type="radio" name="star"/>';
+      domString += '<label class="star star-2" for="star-2">4</label>';
+      domString += '<input class="star star-1" id="star-1" type="radio" name="star"/>';
+      domString += '<label class="star star-1" for="star-1">5</label>';
+      domString += '</form>';
+      domString += `<div id="${movie.id}" class="btn btn-info startForm">Rate</div>`;
+      domString += '</div>';
       domString += `<div id="${movie.id}" class="btn btn-danger deleteBtn">Delete</div>`;
       domString += '</div>';
       domString += '</div>';
