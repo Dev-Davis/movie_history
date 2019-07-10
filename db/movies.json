@@ -3,54 +3,60 @@
     "title": "Wanderlust",
     "movieRating": "R",
     "userRating": "4",
-    "imgUrl": "../src/assets/covers/wanderlust.jpg"
+    "imgUrl": "https://github.com/Dev-Davis/movie_history/blob/master/src/assets/covers/wanderlust.jpg?raw=true"
   },
   "movie2": {
     "title": "Half Baked",
     "movieRating": "R",
     "userRating": "4",
-    "imgUrl": "../src/assets/covers/half_baked.jpg"
+    "imgUrl": "https://github.com/Dev-Davis/movie_history/blob/master/src/assets/covers/half_baked.jpg?raw=true"
   },
   "movie3": {
     "title": "Stomp The Yard",
     "movieRating": "R",
     "userRating": "4.5",
-    "imgUrl": "../src/assets/covers/stomp_the_yard.jpeg"
+    "imgUrl": "https://github.com/Dev-Davis/movie_history/blob/master/src/assets/covers/stomp_the_yard.jpeg?raw=true"
   },
   "movie4": {
     "title": "The Lion King",
     "movieRating": "G",
     "userRating": "4",
-    "imgUrl": "../src/assets/covers/the_lion_king.jpg"
+    "imgUrl": "https://github.com/Dev-Davis/movie_history/blob/master/src/assets/covers/the_lion_king.jpg?raw=true"
   },
   "movie5": {
     "title": "40 Year Old Virgin",
     "movieRating": "R",
     "userRating": "4",
-    "imgUrl": "../src/assets/covers/40_yov.jpeg"
+    "imgUrl": "https://github.com/Dev-Davis/movie_history/blob/master/src/assets/covers/40_yov.jpeg?raw=true"
   },
   "movie6": {
     "title": "Drumline",
     "movieRating": "PG-13",
     "userRating": "5",
-    "imgUrl": "../src/assets/covers/drumline.jpg"
+    "imgUrl": "https://github.com/Dev-Davis/movie_history/blob/master/src/assets/covers/drumline.jpg?raw=true"
   },
   "movie7": {
     "title": "Insidious",
     "movieRating": "PG-13",
     "userRating": "4",
-    "imgUrl": "../src/assets/covers/insidious.jpg"
+    "imgUrl": "https://github.com/Dev-Davis/movie_history/blob/master/src/assets/covers/insidious.jpg?raw=true"
   },
   "movie8": {
     "title": "Jumper",
     "movieRating": "PG-13",
     "userRating": "5",
-    "imgUrl": "../src/assets/covers/jumper.jpg"
+    "imgUrl": "https://github.com/Dev-Davis/movie_history/blob/master/src/assets/covers/jumper.jpg?raw=true"
   },
   "movie9": {
     "title": "Venom",
     "movieRating": "PG-13",
     "userRating": "3",
-    "imgUrl": "../src/assets/covers/venom.jpg"
+    "imgUrl": "https://github.com/Dev-Davis/movie_history/blob/master/src/assets/covers/venom.jpg?raw=true"
+  },
+  "movie10": {
+    "title": "How High",
+    "movieRating": "R",
+    "userRating": "4",
+    "imgUrl": "https://github.com/Dev-Davis/movie_history/blob/master/src/assets/covers/how_high.jpg?raw=true"
   }
 }
