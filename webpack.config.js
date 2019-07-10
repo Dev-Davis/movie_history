@@ -2,6 +2,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
   entry: './src/javascripts/main.js',
+  devtool: 'source-map',
   module: {
     rules: [
       {

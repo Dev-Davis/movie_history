@@ -1,3 +1,5 @@
+/* eslint-disable global-require */
+/* eslint-disable import/no-dynamic-require */
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
@@ -118,6 +120,9 @@ const movieStringBuilder = () => {
     let domString = '';
     domString += '<div class="row">';
     movies.forEach((movie) => {
+      // ../../../assets/covers/wanderlust.jpg
+      // const imgLink = require(`${movie.imgUrl}`);
+      // const imgLink = require('../../../../assets/covers/wanderlust.jpg');
       domString += '<div class="col-lg-3 col-md-4 col-sm-2">';
       domString += '<div class="card text-center border" style="width: 20rem;">';
       domString += `<h4 class="movieTitle">${movie.title}</h4>`;
